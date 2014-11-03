@@ -11,5 +11,8 @@ gem 'pg'
 # Build JSON APIs with ease.
 gem 'jbuilder', '~> 2.1.3'
 
+# Rails engine to implement a Ruby backend store implementation for Annotator
+gem 'annotator-store', '~> 0.2.0'
+
 # Spring speeds up development by keeping your application running in the background.
 gem 'spring', group: :development
