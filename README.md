@@ -11,11 +11,11 @@ Create new Rails app ...
 
 Once done, add this line to your application's Gemfile (installs the latest):
 
-    gem 'annotator-store'
+    gem 'annotator_store'
 
 Or to be more specific with the version, something like this:
 
-    gem 'annotator-store', '~> 0.2.0'
+    gem 'annotator-store', '~> 1.0.0'
 
 And then from your app root execute:
 
@@ -26,10 +26,6 @@ migrations to create the tables to store the annotations:
 
     $ rake annotator_store:install:migrations
     $ rake db:migrate
-
-Require the gem, I did this in `config/application.rb`:
-
-    require 'annotator_store'
 
 Then mount it in `config/routes.rb`:
 
