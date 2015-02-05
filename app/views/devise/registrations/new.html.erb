@@ -32,6 +32,13 @@
           </li>
 
           <li>
+            <%= label_tag :username do %>
+              Username
+              <%= f.text_field :username %>
+            <% end %>
+          </li>
+
+          <li>
             <%= label_tag :password do %>
               Password
               <%= f.password_field :password, autocomplete: 'off' %>

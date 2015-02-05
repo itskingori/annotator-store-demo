@@ -28,6 +28,13 @@
             <% end %>
           </li>
 
+          <li>
+            <%= f.label :username do %>
+              Username
+              <%= f.text_field :username %>
+            <% end %>
+          </li>
+
           <!-- TODO -->
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
