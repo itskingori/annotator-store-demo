@@ -75,4 +75,21 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # +++ ACTION MAILER +++
+  # Set `raise_delivery_errors` to true and configure the email server for
+  # immediate delivery to raise delivery errors.
+  # config.action_mailer.asset_host = 'http://example.com'
+  # config.action_mailer.default_options charset: 'UTF-8'
+  # config.action_mailer.default_url_options = { host: 'example.com' }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = false
+  # config.action_mailer.smtp_settings = { address:              Rails.application.secrets.mail_smtp_host,
+  #                                        user_name:            Rails.application.secrets.mail_username,
+  #                                        password:             Rails.application.secrets.mail_password,
+  #                                        port:                 Rails.application.secrets.mail_port,
+  #                                        domain:               'ml.example.com',
+  #                                        authentication:       :plain
+  #                                      }
 end
