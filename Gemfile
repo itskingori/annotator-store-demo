@@ -23,6 +23,9 @@ gem 'devise', '~> 3.4.1'
 # Use jquery as the JavaScript library.
 gem 'jquery-rails', '~> 3.1.2'
 
+# ZURB Foundation on Sass/Compass
+gem 'foundation-rails', '~> 5.5.1.0'
+
 # Rails engine to implement a Ruby backend store implementation for Annotator
 gem 'annotator_store', path: '/Users/Kingori/Repositories/itsmrwave/annotator_store-gem'
 
