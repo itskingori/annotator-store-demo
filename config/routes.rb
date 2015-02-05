@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   # Create annotator store endpoints on our Rails app that are provided for by
   # the annotatore-store gem.
   mount AnnotatorStore::Engine, at: '/annotator_store'
+
+  get '/auth/token', to: 'tokens#fetch'
 end

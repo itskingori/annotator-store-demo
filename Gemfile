@@ -11,6 +11,12 @@ gem 'pg'
 # Build JSON APIs with ease.
 gem 'jbuilder', '~> 2.1.3'
 
+# JSON Web Token implementation in Ruby.
+gem 'jwt', '~> 1.2.1'
+
+# Middleware that will make Rack-based apps CORS compatible.
+gem 'rack-cors', '~> 0.3.1'
+
 # Rails engine to implement a Ruby backend store implementation for Annotator
 gem 'annotator_store', path: '/Users/Kingori/Repositories/itsmrwave/annotator_store-gem'
 
