@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- +++ META +++ -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= content_for?(:title) ? yield(:title) : "Annotation Engine" %></title>
-    <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
-    <%= javascript_include_tag "application" %>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <%= csrf_meta_tags %>
+
+    <!-- +++ PAGE INFO +++ -->
+    <title><%= content_for?(:title) ? "#{yield :title} • " : 'Store • ' %>Annotation Engine</title>
+
+    <!-- +++ STYLESHEETS +++ -->
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+
+    <!-- +++ JAVASCRIPT +++ -->
+    <%= javascript_include_tag 'vendor/modernizr' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= content_for?(:content) ? yield(:content) : yield %>
   </body>
 </html>
