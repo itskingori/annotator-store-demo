@@ -6,6 +6,10 @@
 <div class="row">
   <div class="small-12 small-centered medium-8 medium-centered large-6 large-centered column clearfix">
 
+    <div class="text-center">
+      <h1><strong><%= link_to 'Annotator Engine', root_path %></strong></h1>
+    </div>
+
     <h3 class="title"><%= yield :title %></h3>
 
     <div class="content">
@@ -66,22 +70,26 @@
             <%= f.submit 'Update Details', class: 'button expand' %>
           </li>
 
-          <ul id="authentication_links" class="no-bullet">
-            <li class="delete text-center">
+          <ul id="authentication_links" class="no-bullet text-center">
+            <li class="delete">
               <%= link_to 'Unhappy? Cancel you account.', registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
+            </li>
+            <li>
+              <%= link_to 'Go back', root_path %>
             </li>
           </ul>
         </ul>
       <% end %>
     </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="row">
+        <div class="text-center large-12 large-centered column clearfix">
+          <%= render "shared/footer" %>
+        </div>
+      </div>
+    </footer>
+
   </div>
 </div>
-
-<!-- footer -->
-<footer>
-  <div class="row">
-    <div class="text-center large-12 large-centered column clearfix">
-      <%= render "shared/footer" %>
-    </div>
-  </div>
-</footer>

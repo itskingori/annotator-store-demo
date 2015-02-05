@@ -1,9 +1,36 @@
 <!-- notifications -->
 <%= render "shared/notifications" %>
 
-<% unless user_signed_in? %>
-  <%= link_to 'Log In', new_user_session_path, class: :button %>
-<% else %>
-  <%= link_to 'Edit Profile', edit_user_registration_path, class: :button %>
-  <%= link_to 'Sign Out', destroy_user_session_path, class: :button, method: :delete %>
-<% end %>
+<div class="row">
+  <div class="small-12 small-centered medium-8 medium-centered large-7 large-centered column clearfix">
+
+    <div class="text-center">
+      <h1><strong><%= link_to 'Annotator Engine', root_path %></strong></h1>
+    </div>
+
+    <div class="text-center">
+      <% unless user_signed_in? %>
+        <%= link_to 'Log In', new_user_session_path, class: :button %>
+      <% else %>
+        <%= link_to 'Edit Profile', edit_user_registration_path, class: :button %>
+        <%= link_to 'Sign Out', destroy_user_session_path, class: :button, method: :delete %>
+      <% end %>
+    </div>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent interdum nisi sit amet lectus volutpat, sed blandit purus dictum. Nulla finibus faucibus pellentesque. Nulla quis erat magna. Nam gravida eget ligula quis fringilla. Sed quis sem quis metus tristique bibendum. Mauris et nibh a quam rutrum consequat. Proin ut viverra lectus, id imperdiet dolor. Fusce fermentum accumsan est ac varius. Vestibulum porttitor eros et iaculis pulvinar. Vestibulum vitae eros vitae mauris convallis mollis. Duis eu tincidunt nisl. Sed fringilla eros quis imperdiet tempor. Cras turpis ex, consequat eget purus in, malesuada posuere nibh. In ipsum ante, porta vel leo at, iaculis sollicitudin nulla.</p>
+
+    <p>Praesent dignissim dolor enim, et venenatis augue faucibus quis. Donec in lorem justo. Sed hendrerit lectus vel nulla luctus vehicula. Etiam vitae elit rhoncus, lacinia augue sed, semper mauris. Donec porttitor tincidunt lorem id vestibulum. Nullam pretium leo volutpat justo ultrices, sit amet ultrices orci ultrices. Quisque egestas urna at ipsum dapibus interdum. Curabitur elementum nisl eget tellus efficitur, eu feugiat lectus dictum. In sagittis nisi ac velit dapibus pellentesque. Morbi tempor mattis interdum. Maecenas ut convallis lorem, ac egestas magna. Sed hendrerit arcu quis pellentesque bibendum. Proin et suscipit lacus. In dictum nulla eu ante bibendum, et vehicula eros feugiat. Maecenas euismod, orci pulvinar aliquet fringilla, neque magna finibus libero, non pellentesque lectus eros eget velit. Sed ornare venenatis justo elementum fermentum.</p>
+
+    <p>Etiam nec laoreet orci. Aliquam vel scelerisque sem, ac aliquet mi. Phasellus auctor cursus risus, gravida vulputate ex dapibus et. Ut pretium molestie ipsum, vitae lacinia lectus condimentum tincidunt. Aenean tempus viverra libero quis commodo. Praesent vulputate ex at velit viverra, vitae egestas ligula ultrices. Aliquam in ipsum at arcu lacinia interdum ut sed purus. Nunc nec urna luctus massa venenatis consectetur. In interdum ornare lacus sit amet consectetur. Vestibulum at efficitur arcu, sed molestie nibh.</p>
+
+    <!-- footer -->
+    <footer>
+      <div class="row">
+        <div class="text-center large-12 large-centered column clearfix">
+          <%= render "shared/footer" %>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</div>
