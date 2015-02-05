@@ -26,6 +26,9 @@ gem 'jquery-rails', '~> 3.1.2'
 # ZURB Foundation on Sass/Compass
 gem 'foundation-rails', '~> 5.5.1.0'
 
+# Adds the ability to normalize attributes cleanly with code blocks and predefined normalizers
+gem 'attribute_normalizer', '~> 1.2.0'
+
 # Rails engine to implement a Ruby backend store implementation for Annotator
 gem 'annotator_store', path: '/Users/Kingori/Repositories/itsmrwave/annotator_store-gem'
 
