@@ -1,3 +1,10 @@
+PATH
+  remote: /Users/Kingori/Repositories/itsmrwave/annotator_store-gem
+  specs:
+    annotator_store (1.0.0)
+      jbuilder
+      rails (>= 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,9 +34,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    annotator_store (1.0.0)
-      jbuilder
-      rails (>= 4.0)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
     erubis (2.7.0)
@@ -84,7 +88,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annotator_store (~> 1.0.0)
+  annotator_store!
   jbuilder (~> 2.1.3)
   pg
   rails (= 4.1.6)

@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150106134701) do
+ActiveRecord::Schema.define(version: 20150113115422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "uuid-ossp"
 
   create_table "annotator_store_annotations", force: true do |t|
     t.string   "version"
@@ -24,6 +23,15 @@ ActiveRecord::Schema.define(version: 20150106134701) do
     t.string   "uri"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "annotator_store_image_annotations", force: true do |t|
+    t.string "page_url"
+    t.string "url"
+    t.text   "text"
+    t.string "shape"
+    t.string "units"
+    t.string "geometry"
   end
 
   create_table "annotator_store_ranges", force: true do |t|
