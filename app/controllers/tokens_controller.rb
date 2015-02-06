@@ -1,16 +1,18 @@
 class TokensController < ApplicationController
-  # Replace these with your details
-  CONSUMER_KEY    = '<BLEEK_LLOYD_CONSUMER_KEY>'
-  CONSUMER_SECRET = '<BLEEK_LLOYD_CONSUMER_SECRET>'
+  # Callbacks
+  before_action :authenticate_user!
+
+  # Constants
+  CONSUMER_KEY    = '<BLEEK_LLOYD_CONSUMER_KEY_EXAMPLE>'
+  CONSUMER_SECRET = '<BLEEK_LLOYD_CONSUMER_SECRET_EXAMPLE>'
 
   def fetch
-    user = User.find_by id: 1
     token = nil
-    if user.present?
-      token = generate_token user.id
+    if current_user.present? && current_user.id
+      token = generate_token current_user.id
       render text: token
     else
-      render text: nil, status: :not_found
+      render text: 'User not found', status: :not_found
     end
   end
 
