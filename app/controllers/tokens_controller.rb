@@ -1,5 +1,6 @@
 class TokensController < ApplicationController
   # Callbacks
+  protect_from_forgery with: :null_session, only: [:fetch]
   before_action :authenticate_user!
 
   # Constants
