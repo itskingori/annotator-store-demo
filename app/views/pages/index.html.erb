@@ -10,10 +10,11 @@
 
     <div class="text-center">
       <% unless user_signed_in? %>
-        <%= link_to 'Log In', new_user_session_path, class: :button %>
+        <%= link_to 'Log In', new_user_session_path, class: 'button tiny' %>
+        <%= link_to 'Sign Up', new_user_registration_path, class: 'button tiny' %>
       <% else %>
-        <%= link_to 'Edit Profile', edit_user_registration_path, class: :button %>
-        <%= link_to 'Sign Out', destroy_user_session_path, class: :button, method: :delete %>
+        <%= link_to 'Edit Profile', edit_user_registration_path, class: 'button tiny' %>
+        <%= link_to 'Sign Out', destroy_user_session_path, class: 'button tiny', method: :delete %>
       <% end %>
     </div>
 

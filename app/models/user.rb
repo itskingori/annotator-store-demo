@@ -10,5 +10,5 @@ class User < ActiveRecord::Base
   # Validations
   validates :username, presence: true,
                        uniqueness: { case_sensitive: false },
-                       format: { with: /\A[\w-]{3,16}\z/, message: "only allows users comprised of 3 to 16 small letters and numbers" }
+                       format: { with: /\A[\w-]{3,16}\z/, message: "only allows users comprised of 3 to 16 characters of letters and numbers" }
 end
