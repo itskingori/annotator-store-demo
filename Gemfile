@@ -30,7 +30,8 @@ gem 'foundation-rails', '~> 5.5.1.0'
 gem 'attribute_normalizer', '~> 1.2.0'
 
 # Rails engine to implement a Ruby backend store implementation for Annotator
-gem 'annotator_store', path: '/Users/Kingori/Repositories/itsmrwave/annotator_store-gem'
+# gem 'annotator_store', path: '/Users/Kingori/Repositories/itsmrwave/annotator_store-gem'
+gem 'annotator_store', git: 'git://github.com/itsmrwave/annotator_store-gem.git', branch: 'add-annotorious-support'
 
 # Spring speeds up development by keeping your application running in the background.
 gem 'spring', group: :development

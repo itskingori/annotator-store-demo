@@ -1,5 +1,7 @@
-PATH
-  remote: /Users/Kingori/Repositories/itsmrwave/annotator_store-gem
+GIT
+  remote: git://github.com/itsmrwave/annotator_store-gem.git
+  revision: 14d3fbc702bdf795f5785077f83b8ff4a2a85677
+  branch: add-annotorious-support
   specs:
     annotator_store (1.0.0)
       jbuilder
