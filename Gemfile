@@ -35,3 +35,7 @@ gem 'annotator_store', git: 'git://github.com/itsmrwave/annotator_store-gem.git'
 
 # Spring speeds up development by keeping your application running in the background.
 gem 'spring', group: :development
+
+# Heroku treats logs as streams and requires your logs to be sent to STDOUT. To
+# enable STDOUT logging in Rails 4 you can add the rails_12factor gem.
+gem 'rails_12factor', group: :production
