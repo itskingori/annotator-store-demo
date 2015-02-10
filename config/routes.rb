@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   # Home page for the Annotator Engine
   root 'pages#index'
 
+  get '/stats', to: 'pages#stats', defaults: { format: :json }
+
   # Devise
   devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions', passwords: 'users/passwords' },
                      path: 'account',
