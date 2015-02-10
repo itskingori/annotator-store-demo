@@ -9,11 +9,14 @@
     </div>
 
     <div class="text-center">
+      <% bl_collection_url = 'http://127.0.0.1:4000/' %>
       <% unless user_signed_in? %>
         <%= link_to 'Log In', new_user_session_path, class: 'button tiny' %>
+        <%= link_to 'Go to the Bleek and Lloyd Collection', bl_collection_url, class: 'button tiny info' %>
         <%= link_to 'Sign Up', new_user_registration_path, class: 'button tiny' %>
       <% else %>
         <%= link_to 'Edit Profile', edit_user_registration_path, class: 'button tiny' %>
+        <%= link_to 'Go to the Bleek and Lloyd Collection', bl_collection_url, class: 'button tiny success' %>
         <%= link_to 'Sign Out', destroy_user_session_path, class: 'button tiny', method: :get %>
       <% end %>
     </div>
