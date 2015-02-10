@@ -79,17 +79,19 @@ Rails.application.configure do
   # +++ ACTION MAILER +++
   # Set `raise_delivery_errors` to true and configure the email server for
   # immediate delivery to raise delivery errors.
-  # config.action_mailer.asset_host = 'http://example.com'
-  # config.action_mailer.default_options charset: 'UTF-8'
-  # config.action_mailer.default_url_options = { host: 'example.com' }
-  # config.action_mailer.delivery_method = :smtp
-  # config.action_mailer.perform_deliveries = true
-  # config.action_mailer.raise_delivery_errors = false
-  # config.action_mailer.smtp_settings = { address:              Rails.application.secrets.mail_smtp_host,
-  #                                        user_name:            Rails.application.secrets.mail_username,
-  #                                        password:             Rails.application.secrets.mail_password,
-  #                                        port:                 Rails.application.secrets.mail_port,
-  #                                        domain:               'ml.example.com',
-  #                                        authentication:       :plain
-  #                                      }
+  config.action_mailer.asset_host = 'http://bleek-lloyd-annotator.herokuapp.com'
+  config.action_mailer.default_options charset: 'UTF-8'
+  config.action_mailer.default_url_options = { host: 'bleek-lloyd-annotator.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    user_name: 'bleekandlloyd@gmail.com',
+    password: ENV['MAIL_PASSWORD'],
+    port: 587,
+    domain: 'bleek-lloyd-annotator.herokuapp.com',
+    authentication: :plain,
+    enable_starttls_auto: true
+  }
 end
