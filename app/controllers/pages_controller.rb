@@ -16,7 +16,10 @@ class PagesController < ApplicationController
       image_stats[ia[:user]] = 0 if image_stats[ia[:user]].blank?
       image_stats[ia[:user]] += 1
     }
-    combined_stats = text_stats.merge(image_stats){|key, oldval, newval| newval + oldval}
+    combined_stats = []
+    text_stats.merge(image_stats){|key, oldval, newval| newval + oldval}.each { |key, value|
+      combined_stats << { username: key, count: value }
+    }
     render json: combined_stats
   end
 
