@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150209120150) do
+ActiveRecord::Schema.define(version: 20150313112855) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,9 +23,12 @@ ActiveRecord::Schema.define(version: 20150209120150) do
     t.string   "uri"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "user",        null: false
-    t.json     "permissions", null: false
+    t.string   "user",                     null: false
+    t.json     "permissions",              null: false
+    t.string   "upvotes",     default: [], null: false, array: true
   end
+
+  add_index "annotator_store_annotations", ["upvotes"], name: "index_annotator_store_annotations_on_upvotes", using: :gin
 
   create_table "annotator_store_image_annotations", force: true do |t|
     t.string "page_url"
@@ -34,9 +37,12 @@ ActiveRecord::Schema.define(version: 20150209120150) do
     t.string "shape"
     t.string "units"
     t.string "geometry"
-    t.string "user",        null: false
-    t.json   "permissions", null: false
+    t.string "user",                     null: false
+    t.json   "permissions",              null: false
+    t.string "upvotes",     default: [], null: false, array: true
   end
+
+  add_index "annotator_store_image_annotations", ["upvotes"], name: "index_annotator_store_image_annotations_on_upvotes", using: :gin
 
   create_table "annotator_store_ranges", force: true do |t|
     t.integer  "annotation_id"
