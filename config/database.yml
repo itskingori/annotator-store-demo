@@ -80,8 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: decsejku1j2ctl
-  username: jiiplufjixpyyy
-  password: 1YdEgc24VIZUQKuQbyIF1RUqBN
-  host: ec2-50-19-219-80.compute-1.amazonaws.com
-  port: 5432
+  database: <%= ENV['DB_NAME'] %>
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOSTNAME'] %>
+  port: <%= ENV['DB_PORT'] %>
